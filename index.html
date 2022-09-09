@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./iranstyle.css"> 
+    <link rel="stylesheet" href="./style.css"> 
+    <title>Hangman Game</title>
+</head>
+<body>
+    <div class="show-timer"><span id="second">00</span> : <span id="minute">03</span></div>
+    <div class="game-head">
+        <h2>نجات شاهزاده <span class="game-name">آریو</span></h2>
+        <p>نام <span id="name" class="game-name">نام</span> پنهان شده را پیدا کنید</p>
+    </div>  
+    <img id="flag"
+        src=""        
+        width="72"
+        height="54">
+    <figure class="img-box">
+        <img id="image" src="img\europe.jpg" alt="region">
+        <figcaption>مرحله <span id="caption">1</span></figcaption>
+    </figure>
+    <div class="game-container">
+        <svg class="figure-container" height="250px" width="200px">
+            <!-- Rod -->
+            <line x1="60" x2="140" y1="20" y2="20" />
+            <line x1="140" x2="140" y1="20" y2="60" />
+            <line x1="60" x2="60" y1="20" y2="220" />
+            <line x1="20" x2="100" y1="220" y2="220" />
+            <!-- Head -->
+            <circle cx="140" cy="80" r="20" class="figure-show"/>
+            <!-- Body -->
+            <line x1="140" x2="140" y1="100" y2="140" class="figure-show"/>
+            <!-- Arms -->
+            <line x1="140" x2="115" y1="120" y2="100" class="figure-show"/>
+            <line x1="140" x2="165" y1="120" y2="100" class="figure-show"/>            
+            <!-- Legs -->
+            <line x1="140" x2="160" y1="140" y2="160" class="figure-show"/> 
+            <line x1="140" x2="120" y1="140" y2="160" class="figure-show"/> 
+        </svg>
+        <div id="wrong-word" class="wrong-word"></div>
+        <div id="word" class="word"></div>
+    </div>
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h1 id="final-message"></h1>
+            <button id="btn-play">مرحله بعدی</button>
+        </div>       
+    </div>
+    <div class="popup-container" id="prelude-container">
+        <div class="prelude">
+            <h1 id="prelude-message">سرنوشت کشور در دست توست.
+                خائنان شاهزاده را در بند کرده اند و این تو هستی که باید با عبور از سه تالار مرگ او را نجات دهی.
+               در تالار اول باید نام کشوری که از نظرها پنهان شده است را پیدا کنی. در این راه از راهنمایی های موجود استفاده کن.</h1>
+            <button id="btn-start">شروع</button>
+        </div>       
+    </div>
+    <div class="notification" id="notif">
+        <p>شما پیشتر از این حرف استفاده کرده اید</p>
+    </div>
+    <audio id="audio" src="./audio/Clint Mansell - The Fountain - 03 - Tree of Life.mp3" autoplay></audio>
+    <script src="./index.js"></script>
+</body>
+</html>
